@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Гиперссылки и форма</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="site-header">
+        <div class="container">
+            <div class="logo">
+                <img src="images.jpg" alt="Логотип">
+            </div>
+            <nav id="main-nav">
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+            </nav>
+        </div>
+        <div class="container">
+            <h1 id="site-title">Гиперссылки, таблица и форма</h1>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="table-section" class="content-section">
+            <h2>Таблица</h2>
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Наименование</th>
+                        <th>Категория</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Джинсы</td>
+                        <td>Одежда</td>
+                        <td>3500 руб.</td>
+                        <td>99</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Футболка</td>
+                        <td>Одежда</td>
+                        <td>800 руб.</td>
+                        <td>86</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Часы</td>
+                        <td rowspan="2">Аксессуары</td>
+                        <td>8000 руб.</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Украшения</td>
+                        <td>10000 руб.</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Куртка</td>
+                        <td>Одежда</td>
+                        <td>6000 руб.</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Итого:</td>
+                        <td>28300 руб.</td>
+                        <td>228</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="content-section">
+            <h2>Список гиперссылок</h2>
+            <ul>
+                <li><a href="http://kubsu.ru">Абсолютная гиперссылка на kubsu.ru</a></li>
+                <li><a href="https://kubsu.ru">Абсолютная гиперссылка на kubsu.ru(в протоколе https)</a></li>
+                <li><a href="https://kubsu.ru"><img src="image.webp" alt="Цветок" style="width: 250px;"></a></li>
+                <li><a href="/about">Сокращенная ссылка на внутреннюю страницу</a></li>
+                <li><a href="/">Сокращенная ссылка на главную страницу</a></li>
+                <li><a href="#fragment">Ссылка на фрагмент текущей страницы</a></li>
+                <li><a href="https://www.kubsu.ru/ru/education/programs">Cсылка с тремя параметрами в URL</a></li>
+                <li><a href="https://infoneeds.kubsu.ru/infoneeds/guests/selectspeciality.jsp?fid=5&year=2022">Cсылка с параметром id в URL</a></li>
+                <li><a href="page.html">Относительная на страницу в текущем каталоге</a></li>
+                <li><a href="about/page.html">Относительная на страницу в каталоге about</a></li>
+                <li><a href="../parent.html">Относительная на страницу уровнем выше</a></li>
+                <li><a href="../../grandparent.html">Относительная на страницу двумя уровнями выше</a></li>
+                <li>Это <a href="https://kubsu.ru/">контекстная ссылка</a> в тексте абзаца</li>
+                <li><a href="https://kubsu.ru/ru/abiturient#block-block-39">Ссылка на фрагмент страницы стороннего сайта</a></li>
+                <li>
+                    <img src="img1.png" alt="ссылки из прямоугольных и круглых областей картинки" usemap="#imagemap">
+                    <map name="imagemap">
+                        <area shape="rect" coords="0,0,100,200" href="https://kubsu.ru/" alt="Прямоугольная область">
+                        <area shape="circle" coords="100,100,150" href="https://kubsu.ru/about" alt="Круглая область">
+                    </map>
+                </li>
+                <li><a href="">Ссылка с пустым href</a></li>
+                <li><a>Ссылка без href</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка, запрещенная для переходов поисковикам</a></li>
+                <li><a href="https://kubsu.ru/" rel="noindex">Ссылка, запрещенная для индексации поисковиками</a></li>
+                <li>
+                    <ol>
+                        <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">КубГУ</a></li>
+                        <li><a href="https://kubsu.ru/about" title="Информация о университете">О университете</a></li>
+                        <li><a href="https://kubsu.ru/education" title="Образовательные программы">Образование</a></li>
+                    </ol>
+                </li>
+                <li><a href="ftp://user:password@ftp.kubsu.ru/file.txt">Ссылка на файл на сервере FTP с авторизацией</a></li>
+            </ul>
+        </section>
+
+        <section id="form-section" class="content-section">
+            <h2>Форма</h2>
+            <form id="user-form">
+                <div class="form-group">
+                    <label for="fio">ФИО:</label>
+                    <input type="text" placeholder="Иванов Иван Иванович" id="fio" name="fio" required>
+                </div>
+                      
+                <div class="form-group">    
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" placeholder="+7 (9XX) XXX XX XX" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">  
+                    <label for="email">E-mail:</label>
+                    <input type="email" placeholder="...@gmail.com" id="email" name="email" required>
+                </div>
+
+                <div class="form-group"> 
+                    <label for="birthdate">Дата рождения:</label>
+                    <input id="birthdate" name="birthdate" required value="2000-01-01" type="date">
+                </div>
+
+                <div class="form-group"> 
+                    <label>Пол:</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Мужской</label>
+                        
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Женский</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="language-single">Любимый язык программирования:</label>
+                    <select id="language-single" name="language-single">
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskel">Haskel</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="language-multiple">Любимые языки программирования (несколько):</label>
+                    <select id="language-multiple" name="language-multiple" multiple size="5">
+                        <option value="pascal">Pascal</option>
+                        <option value="c">C</option>
+                        <option value="cpp">C++</option>
+                        <option value="javascript">JavaScript</option>
+                        <option value="php">PHP</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="haskel">Haskel</option>
+                        <option value="clojure">Clojure</option>
+                        <option value="prolog">Prolog</option>
+                        <option value="scala">Scala</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bio">Биография:</label>
+                    <textarea id="bio" name="bio" rows="5" placeholder="Расскажите о себе..."></textarea>
+                </div>
+          
+                <div class="form-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">С контрактом ознакомлен(а)</label>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <div class="container">
+            <p>&copy; Белов Роман</p>
+        </div>
+    </footer>
+</body>
+</html>
